@@ -1,0 +1,7 @@
+{
+  "name": "MYPES",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
