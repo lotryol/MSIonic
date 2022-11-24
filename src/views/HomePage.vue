@@ -2,21 +2,31 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>M-S.</ion-title>
       </ion-toolbar>
     </ion-header>
     
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-    
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="centrar">
+            <ion-label>
+              <h2>Bienvenido a la aplicación de registro de empresas de Ubaté.</h2>
+            </ion-label>
+          </ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="centrar">
+          <ion-list>
+            <ion-label>
+              <h2>
+                A continuacion inicie sesión, si es nuevo en nuestra plataforma tenga el gusto de registrarse, no le tomará mas de 3 minutos.
+              </h2>
+            </ion-label>
+          </ion-list>
+          <ion-button expand="block" @click="registrar">Registrar</ion-button>
+          <ion-button expand="block" @click="login">Iniciar sesion</ion-button>
+        </ion-card-content>
+      </ion-card>
     </ion-content>
   </ion-page>
 </template>
@@ -33,6 +43,14 @@ export default defineComponent({
     IonPage,
     IonTitle,
     IonToolbar
+  },
+  methods: {
+    registrar() {
+      this.$router.push('/register');
+    },
+    login() {
+      this.$router.push('/login');
+    }
   }
 });
 </script>
@@ -64,5 +82,9 @@ export default defineComponent({
 
 #container a {
   text-decoration: none;
+}
+
+.centrar{
+  text-align: center;
 }
 </style>
